@@ -1,0 +1,2 @@
+rootProject.name='eventbrite'
+include ':app'

@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">eventbrite</string>
+    <string name="let_s_get_started">Let\'s Get Started</string>
+    <string name="aviso">Sign up or log in to see our top picks for you!</string>
+    <string name="email">Email</string>
+    <string name="emailExample">example@example.com</string>
+    <string name="get_started">Get Started</string>
+    <string name="or">or</string>
+    <string name="continue_with_facebook">Continue with Facebook</string>
+    <string name="politicas">By continuing, I accept the Evenbrite \n <a href="#">terms of service</a> and <a href="#">community guidelines</a> and \n have read the <a href="#">privacy policies</a></string>
+    <string name="skip_for_now">Skip for now</string>
+    <string name="report">Report event</string>
+    <string name="reason">Reason</string>
+    <string name="cerrar">cerrar</string>
+    <string name="write_your_reason">Write your reason</string>
+    <string name="message">Message</string>
+    <string name="send_message">Send Message</string>
+    <string name="skip">Skip</string>
+    <string name="follow_to_see_what_s_going_on">Follow to see what\'s going on</string>
+    <string name="hear_about_great_event_first_from_our_best_local_organisers">Hear about great event first, from our best local organisers</string>
+    <string name="ultra_music_festival">Ultra Music Festival</string>
+    <string name="follow">Follow</string>
+    <string name="festival_tomorrowland">Festival Tomorrowland</string>
+    <string name="btc_inc">BTC Inc</string>
+    <string name="champion_nba_sub_20">Champion NBA sub 20</string>
+    <string name="_1015_folsom">1015 Folsom</string>
+    <string name="write_your_message">Write your message</string>
+    <string name="eventbrite">eventbrite</string>
+</resources>

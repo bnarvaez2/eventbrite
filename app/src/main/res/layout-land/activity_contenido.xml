@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".contenidoActivity">
+
+    <TextView
+        android:id="@+id/btnSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="formulario"
+        android:text="@string/skip"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAzulLight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnGetStarted"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSkip">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cntnt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lblFollow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/follow_to_see_what_s_going_on"
+                android:textAllCaps="false"
+                android:textColor="@color/colorNegro"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblAviso"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/hear_about_great_event_first_from_our_best_local_organisers"
+                android:textAllCaps="false"
+                android:textColor="@color/colorNegro"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblFollow" />
+
+            <ImageView
+                android:id="@+id/imgUltraMusic"
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/ultra_music_festival"
+                android:onClick="messageImagen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblAviso"
+                app:srcCompat="@drawable/ic_ultra_music" />
+
+            <TextView
+                android:id="@+id/lblUltra"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/ultra_music_festival"
+                android:textAllCaps="false"
+                android:textColor="@color/colorNegro"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/btnFollowUltra"
+                app:layout_constraintEnd_toStartOf="@+id/btnFollowUltra"
+                app:layout_constraintStart_toEndOf="@+id/imgUltraMusic"
+                app:layout_constraintTop_toTopOf="@+id/btnFollowUltra" />
+
+            <Button
+                android:id="@+id/btnFollowUltra"
+                android:layout_width="93dp"
+                android:layout_height="25dp"
+                android:background="@drawable/button_follow"
+                android:onClick="messageFollow"
+                android:text="@string/follow"
+                android:textAlignment="inherit"
+                android:textAllCaps="false"
+                android:textColor="@color/colorNegro"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imgUltraMusic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imgUltraMusic" />
+
+            <ImageView
+                android:id="@+id/imgTomorrowland"
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@string/festival_tomorrowland"
+                android:onClick="messageImagen"
+                app:layout_constraintStart_toStartOf="@+id/imgUltraMusic"
+                app:layout_constraintTop_toBottomOf="@+id/imgUltraMusic"
+                app:srcCompat="@drawable/ic_tomorrowland" />
+
+            <TextView
+                android:id="@+id/lblTMRLND"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/festival_tomorrowland"
+                android:textColor="@color/colorNegro"
+                app:layout_constraintBottom_toBottomOf="@+id/btnFollowTMRL"
+                app:layout_constraintEnd_toStartOf="@+id/btnFollowTMRL"
+                app:layout_constraintStart_toEndOf="@+id/imgTomorrowland"
+                app:layout_constraintTop_toTopOf="@+id/btnFollowTMRL" />
+
+            <Button
+                android:id="@+id/btnFollowTMRL"
+                android:layout_width="93dp"
+                android:layout_height="25dp"
+                android:background="@drawable/button_follow"
+                android:onClick="messageFollow"
+                android:text="@string/follow"
+                android:textAllCaps="false"
+                android:textColor="@color/colorNegro"
+                app:layout_constraintBottom_toBottomOf="@+id/imgTomorrowland"
+                app:layout_constraintEnd_toEndOf="@+id/btnFollowUltra"
+                app:layout_constraintTop_toTopOf="@+id/imgTomorrowland" />
+
+            <TextView
+                android:id="@+id/lblBTC"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/btc_inc"
+                android:textColor="@color/colorNegro"
+                app:layout_constraintBottom_toBottomOf="@+id/btnFollowBTC"
+                app:layout_constraintEnd_toStartOf="@+id/btnFollowBTC"
+                app:layout_constraintStart_toEndOf="@+id/imgBTC"
+                app:layout_constraintTop_toTopOf="@+id/btnFollowBTC" />
+
+            <Button
+                android:id="@+id/btnFollowBTC"
+                android:layout_width="93dp"
+                android:layout_height="25dp"
+                android:background="@drawable/button_follow"
+                android:onClick="messageFollow"
+                android:text="@string/follow"
+                android:textAllCaps="false"
+                android:textColor="@color/colorNegro"
+                app:layout_constraintBottom_toBottomOf="@+id/imgBTC"
+                app:layout_constraintEnd_toEndOf="@+id/btnFollowTMRL"
+                app:layout_constraintTop_toTopOf="@+id/imgBTC" />
+
+            <ImageView
+                android:id="@+id/imgBTC"
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@string/btc_inc"
+                android:onClick="messageImagen"
+                app:layout_constraintStart_toStartOf="@+id/imgTomorrowland"
+                app:layout_constraintTop_toBottomOf="@+id/imgTomorrowland"
+                app:srcCompat="@drawable/ic_btc" />
+
+            <ImageView
+                android:id="@+id/imgNBA"
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/champion_nba_sub_20"
+                android:onClick="messageImagen"
+                app:layout_constraintStart_toStartOf="@+id/imgBTC"
+                app:layout_constraintTop_toBottomOf="@+id/imgBTC"
+                app:srcCompat="@drawable/ic_nba" />
+
+            <Button
+                android:id="@+id/btnNBA"
+                android:layout_width="93dp"
+                android:layout_height="25dp"
+                android:background="@drawable/button_follow"
+                android:onClick="messageFollow"
+                android:text="@string/follow"
+                android:textAllCaps="false"
+                android:textColor="@color/colorNegro"
+                app:layout_constraintBottom_toBottomOf="@+id/imgNBA"
+                app:layout_constraintEnd_toEndOf="@+id/btnFollowBTC"
+                app:layout_constraintTop_toTopOf="@+id/imgNBA" />
+
+            <TextView
+                android:id="@+id/lblNBA"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/champion_nba_sub_20"
+                android:textColor="@color/colorNegro"
+                app:layout_constraintBottom_toBottomOf="@+id/btnNBA"
+                app:layout_constraintEnd_toStartOf="@+id/btnNBA"
+                app:layout_constraintStart_toEndOf="@+id/imgNBA"
+                app:layout_constraintTop_toTopOf="@+id/btnNBA" />
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="93dp"
+                android:layout_height="25dp"
+                android:background="@drawable/button_follow"
+                android:onClick="messageFollow"
+                android:text="@string/follow"
+                android:textAllCaps="false"
+                android:textColor="@color/colorNegro"
+                app:layout_constraintBottom_toBottomOf="@+id/img1015"
+                app:layout_constraintEnd_toEndOf="@+id/btnNBA"
+                app:layout_constraintTop_toTopOf="@+id/img1015" />
+
+            <ImageView
+                android:id="@+id/img1015"
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/_1015_folsom"
+                android:onClick="messageImagen"
+                app:layout_constraintStart_toStartOf="@+id/imgNBA"
+                app:layout_constraintTop_toBottomOf="@+id/imgNBA"
+                app:srcCompat="@drawable/ic_1015" />
+
+            <TextView
+                android:id="@+id/lbl1015"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/_1015_folsom"
+                android:textColor="@color/colorNegro"
+                app:layout_constraintBottom_toBottomOf="@+id/button10"
+                app:layout_constraintEnd_toStartOf="@+id/button10"
+                app:layout_constraintStart_toEndOf="@+id/img1015"
+                app:layout_constraintTop_toTopOf="@+id/button10" />
+            <!-- REPETICION -->
+
+
+            <ImageView
+                android:id="@+id/imagen1"
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@string/ultra_music_festival"
+                android:onClick="messageImagen"
+                app:layout_constraintStart_toStartOf="@+id/img1015"
+                app:layout_constraintTop_toBottomOf="@+id/img1015"
+                app:srcCompat="@drawable/ic_ultra_music" />
+
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/ultra_music_festival"
+                android:textAllCaps="false"
+                android:textColor="@color/colorNegro"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/bton1"
+                app:layout_constraintEnd_toStartOf="@+id/bton1"
+                app:layout_constraintStart_toEndOf="@+id/imagen1"
+                app:layout_constraintTop_toTopOf="@+id/bton1" />
+
+            <Button
+                android:id="@+id/bton1"
+                android:layout_width="93dp"
+                android:layout_height="25dp"
+                android:background="@drawable/button_follow"
+                android:onClick="messageFollow"
+                android:text="@string/follow"
+                android:textAlignment="inherit"
+                android:textAllCaps="false"
+                android:textColor="@color/colorNegro"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imagen1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imagen1" />
+
+            <ImageView
+                android:id="@+id/imagen2"
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@string/festival_tomorrowland"
+                app:layout_constraintStart_toStartOf="@+id/imagen1"
+                app:layout_constraintTop_toBottomOf="@+id/imagen1"
+                app:srcCompat="@drawable/ic_tomorrowland" />
+
+            <Button
+                android:id="@+id/bton2"
+                android:layout_width="93dp"
+                android:layout_height="25dp"
+                android:background="@drawable/button_follow"
+                android:text="@string/follow"
+                android:textAllCaps="false"
+                android:textColor="@color/colorNegro"
+                app:layout_constraintBottom_toBottomOf="@+id/imagen2"
+                app:layout_constraintEnd_toEndOf="@+id/bton1"
+                app:layout_constraintTop_toTopOf="@+id/imagen2" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/festival_tomorrowland"
+                android:textColor="@color/colorNegro"
+                app:layout_constraintBottom_toBottomOf="@+id/bton2"
+                app:layout_constraintEnd_toStartOf="@+id/bton2"
+                app:layout_constraintStart_toEndOf="@+id/imagen2"
+                app:layout_constraintTop_toTopOf="@+id/bton2" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/btc_inc"
+                android:textColor="@color/colorNegro"
+                app:layout_constraintBottom_toBottomOf="@+id/bton3"
+                app:layout_constraintEnd_toStartOf="@+id/bton3"
+                app:layout_constraintStart_toEndOf="@+id/imagen3"
+                app:layout_constraintTop_toTopOf="@+id/bton3" />
+
+            <Button
+                android:id="@+id/bton3"
+                android:layout_width="93dp"
+                android:layout_height="25dp"
+                android:background="@drawable/button_follow"
+                android:text="@string/follow"
+                android:textAllCaps="false"
+                android:textColor="@color/colorNegro"
+                app:layout_constraintBottom_toBottomOf="@+id/imagen3"
+                app:layout_constraintEnd_toEndOf="@+id/bton2"
+                app:layout_constraintTop_toTopOf="@+id/imagen3" />
+
+            <ImageView
+                android:id="@+id/imagen3"
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@string/btc_inc"
+                app:layout_constraintStart_toStartOf="@+id/imagen2"
+                app:layout_constraintTop_toBottomOf="@+id/imagen2"
+                app:srcCompat="@drawable/ic_btc" />
+
+            <ImageView
+                android:id="@+id/imagen4"
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/champion_nba_sub_20"
+                app:layout_constraintStart_toStartOf="@+id/imagen3"
+                app:layout_constraintTop_toBottomOf="@+id/imagen3"
+                app:srcCompat="@drawable/ic_nba" />
+
+            <Button
+                android:id="@+id/bton4"
+                android:layout_width="93dp"
+                android:layout_height="25dp"
+                android:background="@drawable/button_follow"
+                android:text="@string/follow"
+                android:textAllCaps="false"
+                android:textColor="@color/colorNegro"
+                app:layout_constraintBottom_toBottomOf="@+id/imagen4"
+                app:layout_constraintEnd_toEndOf="@+id/bton3"
+                app:layout_constraintTop_toTopOf="@+id/imagen4" />
+
+
+            <Button
+                android:id="@+id/bton5"
+                android:layout_width="93dp"
+                android:layout_height="25dp"
+                android:background="@drawable/button_follow"
+                android:text="@string/follow"
+                android:textAllCaps="false"
+                android:textColor="@color/colorNegro"
+                app:layout_constraintBottom_toBottomOf="@+id/imagen5"
+                app:layout_constraintEnd_toEndOf="@+id/bton4"
+                app:layout_constraintTop_toTopOf="@+id/imagen5" />
+
+            <ImageView
+                android:id="@+id/imagen5"
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/_1015_folsom"
+                app:layout_constraintStart_toStartOf="@+id/imagen4"
+                app:layout_constraintTop_toBottomOf="@+id/imagen4"
+                app:srcCompat="@drawable/ic_1015" />
+
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/champion_nba_sub_20"
+                android:textColor="@color/colorNegro"
+                app:layout_constraintBottom_toBottomOf="@+id/bton4"
+                app:layout_constraintEnd_toStartOf="@+id/bton4"
+                app:layout_constraintStart_toEndOf="@+id/imagen4"
+                app:layout_constraintTop_toTopOf="@+id/bton4" />
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/_1015_folsom"
+                android:textColor="@color/colorNegro"
+                app:layout_constraintBottom_toBottomOf="@+id/bton5"
+                app:layout_constraintEnd_toStartOf="@+id/bton5"
+                app:layout_constraintStart_toEndOf="@+id/imagen5"
+                app:layout_constraintTop_toTopOf="@+id/bton5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnGetStarted"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/boton_redondo_naranja"
+        android:text="@string/get_started"
+        android:textAllCaps="false"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
